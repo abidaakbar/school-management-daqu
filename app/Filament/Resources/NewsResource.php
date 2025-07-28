@@ -59,8 +59,8 @@ class NewsResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('published_at'),
+                Tables\Columns\TextColumn::make('title')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('published_at')->searchable()->sortable(),
                 // Tambahkan kolom lain yang diperlukan
             ])
             ->filters([
