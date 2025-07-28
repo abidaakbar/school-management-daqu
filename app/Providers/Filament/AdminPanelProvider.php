@@ -18,6 +18,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Facades\Filament;
+use Filament\Notifications\Notification;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -59,6 +60,15 @@ class AdminPanelProvider extends PanelProvider
 
     public function boot(): void
     {
-        Filament::serving(function () {});
+        Filament::serving(function () {
+            // if (auth()->check() && !auth()->user()->hasRole('admin')) {
+            //     Notification::make()
+            //         ->title('Akses ditolak')
+            //         ->danger()
+            //         ->send();
+            //     redirect('/admin')->send();
+            //     exit;
+            // }
+        });
     }
 }
