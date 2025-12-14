@@ -23,22 +23,34 @@ class PaperResource extends Resource
                 // Input untuk Judul (wajib)
                 Forms\Components\TextInput::make('title')
                     ->required()
-                    ->label('Title'), // Anda dapat menghapus label jika ingin tampil tanpa label
+                    ->label('Title'),
 
                 // Input untuk Penulis (wajib)
                 Forms\Components\TextInput::make('author')
                     ->required()
-                    ->label('Author'), // Anda dapat menghapus label jika ingin tampil tanpa label
+                    ->label('Author'),
 
-                // Input untuk Path PDF (wajib)
+                // Input untuk Abstrak (opsional/tapi biasanya wajib)
+                Forms\Components\Textarea::make('abstract')
+                    ->required()
+                    ->label('Abstract')
+                    ->rows(5)
+                    ->placeholder('Tulis abstrak singkat paper...'),
+
+                // Input untuk Tanggal Publish
+                Forms\Components\DatePicker::make('published_at')
+                    ->required()
+                    ->label('Published Date'),
+
+                // Input untuk Path PDF
                 Forms\Components\FileUpload::make('pdf_path')
                     ->required()
-                    ->label('PDF File') // Anda dapat menghapus label jika ingin tampil tanpa label
-                    ->maxSize(10240) // Maksimal ukuran file 2MB
-                    ->preserveFilenames() // Menyimpan nama file asli
-                    ->reactive() // Jika ingin reaktif terhadap form
+                    ->label('PDF File')
+                    ->maxSize(10240) // dalam KB (10 MB)
+                    ->preserveFilenames()
+                    ->reactive()
                     ->acceptedFileTypes(['application/pdf'])
-                    ->directory('papers'), // Folder di mana file akan disimpan
+                    ->directory('papers'),
             ]);
     }
 
@@ -46,17 +58,23 @@ class PaperResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->label('Title'),
-                Tables\Columns\TextColumn::make('author')->label('Author'),
+                Tables\Columns\TextColumn::make('title')->label('Title')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('author')->label('Author')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('abstract')
+                    ->label('Abstract')
+                    ->limit(50), // batasi agar tidak terlalu panjang di tabel
+                Tables\Columns\TextColumn::make('published_at')
+                    ->label('Published Date')
+                    ->date('d M Y')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('pdf_path')->label('PDF Path'),
-                //
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make(), // Menambahkan tombol delete
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

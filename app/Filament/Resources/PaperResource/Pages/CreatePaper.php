@@ -28,4 +28,9 @@ class CreatePaper extends CreateRecord
     //         // Custom form configuration jika diperlukan
     //     ]);
     // }
+
+    protected function getRedirectUrl(): string
+    {
+        return PaperResource::getUrl('index');
+    }
 }

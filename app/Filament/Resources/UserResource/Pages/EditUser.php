@@ -18,10 +18,10 @@ class EditUser extends EditRecord
             $this->record->syncRoles([$role]);
         }
 
-        Notification::make()
-            ->title('User berhasil diperbarui.')
-            ->success()
-            ->send();
+        // Notification::make()
+        //     ->title('User berhasil diperbarui.')
+        //     ->success()
+        //     ->send();
     }
 
     protected function mutateFormDataBeforeFill(array $data): array

@@ -13,5 +13,6 @@ class OsisMember extends Model
     protected $fillable = [
         'name',
         'position',
+        'foto',
     ];
 }

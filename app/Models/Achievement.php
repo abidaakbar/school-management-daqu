@@ -13,7 +13,7 @@ class Achievement extends Model
     protected $fillable = [
         'student_name',
         'achievement',
-        'year',
+        'achievement_date',
         'foto1',
         'foto2',
         'keterangan',

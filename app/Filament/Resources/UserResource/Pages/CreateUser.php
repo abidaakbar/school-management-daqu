@@ -18,10 +18,10 @@ class CreateUser extends CreateRecord
             $this->record->syncRoles([$role]);
         }
 
-        Notification::make()
-            ->title('User berhasil dibuat.')
-            ->success()
-            ->send();
+        // Notification::make()
+        //     ->title('User berhasil dibuat.')
+        //     ->success()
+        //     ->send();
     }
 
     protected function getRedirectUrl(): string

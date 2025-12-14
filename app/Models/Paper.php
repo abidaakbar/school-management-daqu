@@ -14,5 +14,7 @@ class Paper extends Model
         'title',
         'author',
         'pdf_path',
+        'abstract',
+        'published_at'
     ];
 }

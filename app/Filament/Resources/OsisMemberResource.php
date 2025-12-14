@@ -32,6 +32,14 @@ class OsisMemberResource extends Resource
                 Forms\Components\TextInput::make('position')
                     ->required()
                     ->label('Jabatan'),
+
+                Forms\Components\FileUpload::make('foto')
+                    ->label('Foto Anggota')
+                    ->image()
+                    ->directory('osis-members') // folder penyimpanan
+                    ->visibility('public')      // supaya bisa diakses
+                    ->required(),
+
             ]);
     }
 
@@ -44,6 +52,12 @@ class OsisMemberResource extends Resource
 
                 // Kolom untuk menampilkan jabatan
                 Tables\Columns\TextColumn::make('position')->label('Jabatan'),
+
+                Tables\Columns\ImageColumn::make('foto')
+                    ->label('Foto')
+                    ->square()      // biar proporsional kotak
+                // ->size(60),     // atur ukuran thumbnail
+
             ])
             ->filters([
                 //

@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\AchievementResource\Pages;
-use App\Filament\Resources\AchievementResource\RelationManagers;
 use App\Models\Achievement;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class AchievementResource extends Resource
 {
@@ -33,25 +30,28 @@ class AchievementResource extends Resource
                     ->required()
                     ->label('Pencapaian'),
 
-                // Input untuk Tahun (wajib)
-                Forms\Components\TextInput::make('year')
-                    ->numeric()
+                // Input untuk Tanggal Pencapaian (ganti dari year ke date)
+                Forms\Components\DatePicker::make('achievement_date')
                     ->required()
-                    ->label('Tahun'),
+                    ->label('Tanggal Pencapaian'),
 
                 // Input untuk Foto 1 (wajib)
                 Forms\Components\FileUpload::make('foto1')
                     ->required()
                     ->label('Foto 1')
-                    ->image() // Hanya menerima file gambar
-                    ->directory('achievements'),
+                    ->directory('achievements')
+                    ->visibility('public')
+                    ->imageEditor()
+                    ->image(),
 
                 // Input untuk Foto 2 (opsional)
                 Forms\Components\FileUpload::make('foto2')
                     ->nullable()
                     ->label('Foto 2')
-                    ->image() // Hanya menerima file gambar
-                    ->directory('achievements'),
+                    ->directory('achievements')
+                    ->visibility('public')
+                    ->imageEditor()
+                    ->image(),
 
                 // Input untuk Keterangan (opsional)
                 Forms\Components\Textarea::make('keterangan')
@@ -66,17 +66,24 @@ class AchievementResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('student_name')->label('Nama Siswa'),
                 Tables\Columns\TextColumn::make('achievement')->label('Pencapaian'),
-                Tables\Columns\TextColumn::make('year')->label('Tahun'),
-                Tables\Columns\TextColumn::make('foto1')->label('Foto 1'),
-                Tables\Columns\TextColumn::make('foto2')->label('Foto 2')->sortable(),
+                Tables\Columns\TextColumn::make('achievement_date')
+                    ->label('Tanggal Pencapaian')
+                    ->date('d M Y') // format: 16 Agu 2025
+                    ->sortable(),
+                Tables\Columns\ImageColumn::make('foto1')
+                    ->label('Foto 1')
+                    ->square(),
+                Tables\Columns\ImageColumn::make('foto2')
+                    ->label('Foto 2')
+                    ->square(),
                 Tables\Columns\TextColumn::make('keterangan')->label('Keterangan'),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make(), // Menambahkan tombol delete
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -87,9 +94,7 @@ class AchievementResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array
