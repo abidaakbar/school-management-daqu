@@ -1,157 +1,119 @@
 @extends('layouts.main')
 
 @section('contents')
+    <!-- Page Title -->
     <div class="page-title">
         <div class="container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">About</h1>
+            <h1 class="mb-2 mb-lg-0">Profil Sekolah</h1>
             <nav class="breadcrumbs">
                 <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current">About</li>
+                    <li><a href="{{ route('home') }}">Beranda</a></li>
+                    <li class="current">Profil Sekolah</li>
                 </ol>
             </nav>
         </div>
-    </div><!-- End Page Title -->
+    </div>
+    <!-- End Page Title -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
+    <!-- Profil Singkat Section -->
+    <section id="profile" class="about section">
         <div class="container">
-
-            <div class="row gy-4">
+            <div class="row gy-4 align-items-center">
 
                 <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-                    <p class="who-we-are">Who We Are</p>
-                    <h3>Unleashing Potential with Creative Strategy</h3>
+                    <p class="who-we-are">Profil Singkat</p>
+                    <h3>Pesantren Tahfiz Daarul Quran Ketapang</h3>
+
                     <p class="fst-italic">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore
-                        magna aliqua.
+                        Pesantren Tahfiz Daarul Quran Ketapang merupakan lembaga pendidikan Islam yang berfokus pada
+                        pembinaan generasi Qurani melalui program tahfiz Al-Qur’an yang terintegrasi dengan pendidikan
+                        formal dan pembentukan karakter Islami.
                     </p>
-                    <ul>
-                        <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.</span></li>
-                        <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate
-                                velit.</span></li>
-                        <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda
-                                mastiro dolore eu fugiat nulla pariatur.</span></li>
-                    </ul>
+
+                    <p>
+                        Dengan lingkungan yang kondusif, tenaga pendidik yang kompeten, serta kurikulum yang terarah,
+                        Pesantren Tahfiz Daarul Quran Ketapang berkomitmen mencetak santri yang tidak hanya unggul dalam
+                        hafalan Al-Qur’an, tetapi juga memiliki akhlak mulia, disiplin, serta kesiapan menghadapi
+                        tantangan zaman.
+                    </p>
                 </div>
 
-                <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
-                    <div class="row gy-4">
-                        <div class="col-lg-6">
-                            <img src="assets/img/about-company-1.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="row gy-4">
-                                <div class="col-lg-12">
-                                    <img src="assets/img/about-company-2.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="col-lg-12">
-                                    <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <img src="{{ asset('images/gedung-daqu.jpg') }}" class="img-fluid rounded" alt="Profil Sekolah">
                 </div>
 
             </div>
-
         </div>
-    </section><!-- /About Section -->
+    </section>
+    <!-- /Profil Singkat Section -->
 
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <div class="section-title-container d-flex align-items-center justify-content-between">
-                <h2>Team</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div>
-        </div><!-- End Section Title -->
-
+    <!-- Visi & Misi Section -->
+    <section id="vision-mission" class="section bg-light">
         <div class="container">
+
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>Visi & Misi</h2>
+                <p>Landasan dan arah pengembangan Pesantren Tahfiz Daarul Quran Ketapang</p>
+            </div>
 
             <div class="row gy-4">
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
-                            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter-x"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""> <i class="bi bi-linkedin"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Team Member -->
+                    <h4>Visi</h4>
+                    <p>
+                        Menjadi lembaga pendidikan Islam unggulan dalam mencetak generasi penghafal Al-Qur’an yang
+                        berakhlakul karimah, berwawasan luas, dan berkontribusi positif bagi umat dan bangsa.
+                    </p>
+                </div>
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="team-member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>Sarah Jhonson</h4>
-                            <span>Product Manager</span>
-                            <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter-x"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""> <i class="bi bi-linkedin"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Team Member -->
+                    <h4>Misi</h4>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Menyelenggarakan pendidikan tahfiz Al-Qur’an yang
+                            sistematis, berkualitas, dan berkesinambungan.</li>
+                        <li><i class="bi bi-check-circle"></i> Membentuk karakter santri yang berakhlak mulia,
+                            disiplin, dan bertanggung jawab.</li>
+                        <li><i class="bi bi-check-circle"></i> Mengintegrasikan nilai-nilai keislaman dalam seluruh
+                            aspek kehidupan santri.</li>
+                        <li><i class="bi bi-check-circle"></i> Menyiapkan santri agar mampu berperan aktif dalam
+                            masyarakat dengan bekal ilmu dan iman.</li>
+                    </ul>
+                </div>
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="team-member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
-                            <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter-x"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""> <i class="bi bi-linkedin"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Team Member -->
+            </div>
+        </div>
+    </section>
+    <!-- /Visi & Misi Section -->
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="team-member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <h4>Amanda Jepson</h4>
-                            <span>Accountant</span>
-                            <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter-x"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""> <i class="bi bi-linkedin"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Team Member -->
+    <!-- Sejarah Section -->
+    <section id="history" class="section">
+        <div class="container">
 
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>Sejarah Singkat</h2>
+                <p>Perjalanan berdirinya Pesantren Tahfiz Daarul Quran Ketapang</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                    <p>
+                        Pesantren Tahfiz Daarul Quran Ketapang didirikan sebagai wujud kepedulian terhadap pentingnya
+                        pendidikan Al-Qur’an sejak usia dini hingga remaja. Berawal dari semangat untuk melahirkan
+                        generasi yang dekat dengan Al-Qur’an, pesantren ini berkembang menjadi lembaga pendidikan yang
+                        mengedepankan keseimbangan antara hafalan, pemahaman agama, dan pembinaan karakter.
+                    </p>
+
+                    <p>
+                        Seiring berjalannya waktu, Pesantren Tahfiz Daarul Quran Ketapang terus melakukan pembenahan
+                        dan pengembangan, baik dari sisi kurikulum, sarana prasarana, maupun kualitas sumber daya
+                        manusia, guna menjawab kebutuhan pendidikan Islam yang relevan dengan perkembangan zaman.
+                    </p>
+                </div>
             </div>
 
         </div>
-
-    </section><!-- /Team Section -->
+    </section>
+    <!-- /Sejarah Section -->
 @endsection
 
 @section('scripts')

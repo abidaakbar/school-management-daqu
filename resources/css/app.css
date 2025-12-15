@@ -14,3 +14,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.pagination .page-link {
+    color: #333;
+}
+
+.pagination .active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+.pagination .disabled .page-link {
+    color: #aaa;
+}

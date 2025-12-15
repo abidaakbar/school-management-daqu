@@ -9,40 +9,33 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-                <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">About</a>
+                <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a>
+                </li>
+                <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">Profil</a>
                 </li>
                 {{-- <li><a href="single-post.html">Single Post</a></li> --}}
-                <li class="dropdown"><a href="#"><span>Categories</span> <i
+                <li class="dropdown"><a href="#"><span>Kategori</span> <i
                             class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="category.html">Achievment</a></li>
-                        {{-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">Deep Dropdown 1</a></li>
-                                <li><a href="#">Deep Dropdown 2</a></li>
-                                <li><a href="#">Deep Dropdown 3</a></li>
-                                <li><a href="#">Deep Dropdown 4</a></li>
-                                <li><a href="#">Deep Dropdown 5</a></li>
-                            </ul>
-                        </li> --}}
-                        <li><a href="category.html">News</a></li>
-                        <li><a href="category.html">Paper</a></li>
-                        <li><a href="category.html">Teacher</a></li>
-                        <li><a href="category.html">Osis Member</a></li>
-                    </ul>
+                        <li><a href="{{ route('achievement') }}">Prestasi</a></li>
+
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{ route('news') }}">Berita</a></li>
+                <li><a href="{{ route('papers') }}">Artikel</a></li>
+                <li><a href="{{ route('teachers') }}">Guru</a></li>
+            </ul>
+            </li>
+            <li><a href="{{ route('contact') }}">Kontak</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
         <div class="header-social-links">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            {{-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> --}}
+            <a href="https://wa.me/+6282122277712" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/pesantrendaqu_tangerang?igsh=cHpnaDlwMnp1bXpn" class="instagram"><i
+                    class="bi bi-instagram"></i></a>
+            <a href="#" class="envelope"><i class="bi bi-envelope"></i></a>
         </div>
 
     </div>

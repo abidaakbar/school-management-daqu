@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class ContactController extends Controller
 {
     public function index()
     {
         $data = [
-            'title' => 'Profil Sekolah'
+            'title' => 'Kontak'
         ];
 
-        return view("about", $data);
+        return view("contact", $data);
     }
 }
