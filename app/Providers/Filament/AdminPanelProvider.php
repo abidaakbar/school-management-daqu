@@ -37,7 +37,8 @@ class AdminPanelProvider extends PanelProvider
             ->brandName("Daarul Qur'an Internasional Boarding School")
 
             // Ganti logo brand (opsional)
-            ->brandLogo(fn() => view('components.brand-logo'))
+            // ->brandLogo(fn() => view('components.brand-logo'))
+            ->brandLogo(null)
 
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

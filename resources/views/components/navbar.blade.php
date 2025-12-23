@@ -32,7 +32,7 @@
 
         <div class="header-social-links">
             {{-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> --}}
-            <a href="https://wa.me/+6282122277712" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://wa.me/6282122277712" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
             <a href="https://www.instagram.com/pesantrendaqu_tangerang?igsh=cHpnaDlwMnp1bXpn" class="instagram"><i
                     class="bi bi-instagram"></i></a>
             <a href="#" class="envelope"><i class="bi bi-envelope"></i></a>

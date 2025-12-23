@@ -28,7 +28,7 @@ class AchievementResource extends Resource
                 // Input untuk Pencapaian (wajib)
                 Forms\Components\TextInput::make('achievement')
                     ->required()
-                    ->label('Pencapaian'),
+                    ->label('Judul Berita'),
 
                 // Input untuk Tanggal Pencapaian (ganti dari year ke date)
                 Forms\Components\DatePicker::make('achievement_date')
@@ -65,18 +65,18 @@ class AchievementResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('student_name')->label('Nama Siswa'),
-                Tables\Columns\TextColumn::make('achievement')->label('Pencapaian'),
+                Tables\Columns\TextColumn::make('achievement')->label('Judul Berita'),
                 Tables\Columns\TextColumn::make('achievement_date')
                     ->label('Tanggal Pencapaian')
                     ->date('d M Y') // format: 16 Agu 2025
                     ->sortable(),
-                Tables\Columns\ImageColumn::make('foto1')
-                    ->label('Foto 1')
-                    ->square(),
-                Tables\Columns\ImageColumn::make('foto2')
-                    ->label('Foto 2')
-                    ->square(),
-                Tables\Columns\TextColumn::make('keterangan')->label('Keterangan'),
+                // Tables\Columns\ImageColumn::make('foto1')
+                //     ->label('Foto 1')
+                //     ->square(),
+                // Tables\Columns\ImageColumn::make('foto2')
+                //     ->label('Foto 2')
+                //     ->square(),
+                // Tables\Columns\TextColumn::make('keterangan')->label('Keterangan'),
             ])
             ->filters([
                 //

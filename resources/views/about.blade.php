@@ -61,22 +61,20 @@
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <h4>Visi</h4>
                     <p>
-                        Menjadi lembaga pendidikan Islam unggulan dalam mencetak generasi penghafal Al-Qur’an yang
-                        berakhlakul karimah, berwawasan luas, dan berkontribusi positif bagi umat dan bangsa.
+                        Melahirkan generasi pemimpin bangsa dan dunia yang saleh dan berkarakter Qur’ani serta berjiwa
+                        entrepreneur dalam membangun peradaban Islam masa depan.
                     </p>
                 </div>
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <h4>Misi</h4>
                     <ul>
-                        <li><i class="bi bi-check-circle"></i> Menyelenggarakan pendidikan tahfiz Al-Qur’an yang
-                            sistematis, berkualitas, dan berkesinambungan.</li>
-                        <li><i class="bi bi-check-circle"></i> Membentuk karakter santri yang berakhlak mulia,
-                            disiplin, dan bertanggung jawab.</li>
-                        <li><i class="bi bi-check-circle"></i> Mengintegrasikan nilai-nilai keislaman dalam seluruh
-                            aspek kehidupan santri.</li>
-                        <li><i class="bi bi-check-circle"></i> Menyiapkan santri agar mampu berperan aktif dalam
-                            masyarakat dengan bekal ilmu dan iman.</li>
+                        <li> Mewujudkan lembaga pendidikan berbasis Daqu Method (Iqomatul
+                            Wajib wa Ihyaussunnah) yang unggul, kompetitip, global dan rahmatan lil alamin.</li>
+                        <li> Mencetak generasi Qur’ani yang Mandiri, berjiwa Pemimpin,
+                            Cerdas, Peka, Visioner dan berwawasan luas serta menjadikan Daqu Method sebagai pakaian
+                            sehari-hari.</li>
+                        <li> Mencetak generasi yang cinta bersedekah sepanjang hidup</li>
                     </ul>
                 </div>
 

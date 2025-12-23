@@ -43,20 +43,29 @@
 
 
                                 {{-- KONTAK --}}
-                                <div class="social">
+                                <div class="teacher-contact d-flex flex-column gap-1 mt-2">
+
                                     @if ($teacher->email)
-                                        <a href="mailto:{{ $teacher->email }}">
-                                            <i class="bi bi-envelope"></i>
-                                        </a>
+                                        <span>
+                                            <i class="bi bi-envelope me-2"></i>
+                                            <a href="mailto:{{ $teacher->email }}">
+                                                {{ $teacher->email }}
+                                            </a>
+                                        </span>
                                     @endif
 
                                     @if ($teacher->no_telp)
-                                        <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $teacher->no_telp) }}"
-                                            target="_blank">
-                                            <i class="bi bi-whatsapp"></i>
-                                        </a>
+                                        <span>
+                                            <i class="bi bi-whatsapp me-2"></i>
+                                            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $teacher->no_telp) }}"
+                                                target="_blank">
+                                                {{ $teacher->no_telp }}
+                                            </a>
+                                        </span>
                                     @endif
+
                                 </div>
+
                             </div>
 
                         </div>
